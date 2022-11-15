@@ -74,18 +74,9 @@ p{
     }
 }
 
-.container{
-    position: relative;
-    padding: 25px 0;
-    max-width: 1000px;
-    height: 100vh;
-    margin: 0 auto;
-}
-
 .header-container{
     position: relative;
     max-width: 1200px;
-    /* height: 100vh; */
     margin: 0 auto;
 }
 
@@ -220,12 +211,9 @@ nav ul li a:hover::after{
 /* -----------about section------------ */
 
 #about{
-    margin-top: 100px;
-    padding: 100px 80px;
-}
-
-#about .container{
-    height: 80vh;
+    padding: 150px 25px;
+    max-width: 1050px;
+    margin: 50px auto;
 }
 
 .sub-title{
@@ -240,15 +228,6 @@ nav ul li a:hover::after{
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
-/* .sub-title::after{
-    content: "";
-    position: absolute;
-    background-color: #a0a0a0;
-    height: 1px;
-    max-width: 600px;
-
-} */
 
 .about-col-1{
     flex-basis: 60%;
@@ -290,14 +269,11 @@ nav ul li a:hover::after{
 }
 
 .tab-links{
-    /* width: 150px; */
-    /* margin-right: 40px; */
     font-size: 18px;
     font-weight: 500;
     position: relative;
     cursor: pointer;
     color: #737373;
-    /* text-align: center; */
 }
 
 .tab-links::after{
@@ -345,7 +321,9 @@ nav ul li a:hover::after{
 /* -----------projects------------- */
 
 #projects{
-    padding: 0px 80px;
+    padding: 25px 25px;
+    max-width: 1050px;
+    margin: 50px auto;
 }
 
 .project-grid{
@@ -469,9 +447,34 @@ nav ul li a:hover::after{
 
 .cover-image {
     width: 100%;
+    min-height: 300px;
+    object-fit: cover;
 }
 
-.heading-article{
-    padding: 40px 0px 20px;
+.article{
+    padding: 40px 15px;
+    max-width: 1030px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-heading{
+    padding: 10px 0px 10px 0px;
     font-weight: 400;
+}
+
+.article-para{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.article-image{
+    padding: 20px 0px;
+    max-width: 800px;
+    width: 100%;
 }
