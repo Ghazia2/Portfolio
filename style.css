@@ -35,7 +35,7 @@ p{
 .ball{
     scale: 1;
     position: absolute;
-    top: 17%;
+    top: 18%;
     right: 54%;
     display: block;
     animation: ballXAnim 3s ease-in-out infinite;
@@ -464,17 +464,34 @@ nav ul li a:hover::after{
 
 .article-heading{
     padding: 10px 0px 10px 0px;
+    font-size: clamp(28px, 2vw, 32px);
     font-weight: 400;
 }
 
 .article-para{
-    font-size: 18px;
+    font-size: clamp(15px, 1.125vw, 18px);
     line-height: 1.5;
-    font-weight: 300;
+    color: #cadff9;
 }
 
 .article-image{
     padding: 20px 0px;
     max-width: 800px;
     width: 100%;
+}
+
+/* -------------ML Agent------------- */
+
+#page3{
+    overflow-x: hidden;
+    background: #33281D;
+    color: white;
+}
+
+#page3 .cover-image{
+    min-height: 250px;
+}
+
+#page3 .article-para{
+    color: #dbcec1;
 }
