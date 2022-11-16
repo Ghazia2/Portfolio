@@ -21,6 +21,7 @@
                 </ul>
             </nav>
             <img src="/img/projects/UnityMLAgents/coverMain.png" class="cover-image">
+            <div onclick="topFunction()" id="scrollTop"></div>
         </div>
     </div>
     <div class="article">
@@ -71,5 +72,23 @@
         <img src="/img/projects/UnityMLAgents/botStrat1.gif" class="article-image">
         <p class="article-para">After all the modification, tweaking, and hours of training, I ended up with two different brains using two different strategies. Overall, this was a successful first attempt and an overwhelmingly enjoyable experience.</p>
     </div>
+    <script>
+        let myButton = document.getElementById("scrollTop");
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                myButton.style.display = "block";
+            }
+            else{
+                myButton.style.display = "none";
+            }
+        }
+
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

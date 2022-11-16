@@ -207,6 +207,50 @@ nav ul li a:hover::after{
     opacity: 0;
  }
 }
+
+/* ============== scroll top ================= */
+
+#scrollTop::before{
+    content: "";
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    outline: none;
+    border: none;
+    z-index: 98;
+    border-radius: 50px;
+    background-color: white;
+    cursor: pointer;
+    opacity: 20%;
+}
+
+#scrollTop{
+    display: none;
+    z-index: 99;
+}
+
+#scrollTop::after{
+    content: "";
+    position: fixed;
+    height: 10px;
+    width: 10px;
+    right: 70px;
+    bottom: 68.5px;
+    outline: none;
+    z-index: 100;
+    /* border: 3px solid #212121; */
+    border: 3px solid white;
+    transform: translate(50%, 50%) rotate(45deg);
+    border-bottom: transparent;
+    border-right: transparent;
+    cursor: pointer;
+}
+
+#scrollTop:hover::before{
+    opacity: 40%;
+}
  
 /* -----------about section------------ */
 
@@ -495,10 +539,4 @@ nav ul li a:hover::after{
 
 #page3 .article-para, #page3 .article-li{
     color: #dbcec1;
-}
-
-.article-flex{
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }

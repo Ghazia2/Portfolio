@@ -21,6 +21,7 @@
                 </ul>
             </nav>
             <img src="/img/projects/Byjus/coverMain.png" class="cover-image">
+            <div onclick="topFunction()" id="scrollTop"></div>
         </div>
     </div>
     <div class="article">
@@ -43,5 +44,23 @@
             <p class="article-para">The last two years of working at Byju’s have been a great learning experience. The biggest takeaway is my improved self. Communicating and working alongside other professionals, observing their workflow and problem-solving techniques made me a more competent professional.</p>
         </div>
     </div>
+    <script>
+        let myButton = document.getElementById("scrollTop");
+        window.onscroll = function(){scrollFunction()};
+    
+        function scrollFunction(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                myButton.style.display = "block";
+            }
+            else{
+                myButton.style.display = "none";
+            }
+        }
+    
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
 </body>
 </html>

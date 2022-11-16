@@ -19,20 +19,20 @@
   <div class="plane"></div>
     <div class="sphere"></div>
   <div class="header-container">
-   <nav>
-    <a href="/"><img src="img/landing/logo.png" class="logo"></a>
-    <ul>
-     <li><a href="#about">ABOUT</a></li>
-     <li><a href="#projects">WORK</a></li>
-     <li><a href="/vivekkumar_resume.pdf" target="_blank">RESUME</a></li>
-     <li><a href="#">CONTACT</a></li>
-    </ul>
-   </nav>
-   <div class="header-text">
-    <h1>Vivek Kumar</h1>
-    <h2>GAME DEVELOPER</h2>
-  </div>
-   <!-- <p>I'm a game developer specializing in building immersive and unforgettable gameplay. Currently, I'm building interative educational games at BYJU'S.</p> -->
+        <nav>
+            <a href="/"><img src="img/landing/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#projects">WORK</a></li>
+                <li><a href="/vivekkumar_resume.pdf" target="_blank">RESUME</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Vivek Kumar</h1>
+            <h2>GAME DEVELOPER</h2>
+        </div>
+        <div onclick="topFunction()" id="scrollTop"></div>
   </div>
   <div class="scroll-down"></div>
  </div>
@@ -158,6 +158,24 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    let myButton = document.getElementById("scrollTop");
+    window.onscroll = function(){scrollFunction()};
+
+    function scrollFunction(){
+        if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+            myButton.style.display = "block";
+        }
+        else{
+            myButton.style.display = "none";
+        }
+    }
+
+    function topFunction(){
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
     }
 </script>
 </body>
