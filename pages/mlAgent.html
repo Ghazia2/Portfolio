@@ -33,16 +33,43 @@
             <p class="article-para">The Agents/Bots will learn using Reinforcement Learning, therefore their actions are either rewarded or penalized. The future generation Bots will act upon these sets and create better and better behaviors.</p>
         </div>
         <img src="/img/projects/UnityMLAgents/flowChart.png" class="article-image">
-        <p class="article-para"> The typical framing of a Reinforcement Learning scenario: an agent takes actions in an environment, which is interpreted into a reward and a representation of the state, which are fed back into the agent.</p>
+        <div>
+            <p class="article-para"> The typical framing of a Reinforcement Learning scenario: an agent takes actions in an environment, which is interpreted into a reward and a representation of the state, which are fed back into the agent.</p>
+        </div>
         <div>
             <h1 class="article-heading">Designing the Environment</h1>
-            <p class="article-para">The tech stack that XPLORE operates on is TypeScript and CocosCreator, and both were new to me. Learning them was fun, but the unavailability of online resources made the whole process strenuous. My previous understanding/ knowledge of Unity Engine also helped since they both have the same workflow.</p>
+            <p class="article-para">A typical Learning Environment contains three components:
+            </p>
+            <ul>
+                <li class="article-li">Agent: It is an assumed AI entity that performs actions in an environment to gain reward.</li>
+                <li class="article-li">Brain: It defines what are the inputs and outputs of the decision process.</li>
+                <li class="article-li">Academy: which orchestrates the observation and decision making process.</li>
+            </ul>
         </div>
-        <img src="/img/projects/UnityMLAgents/flowChart.png" class="article-image">
+        <img src="/img/projects/UnityMLAgents/codeSnip.png" class="article-image">
         <div>
-            <h1 class="article-heading">Learnings and Takeaways</h1>
-            <p class="article-para">The last two years of working at Byju’s have been a great learning experience. The biggest takeaway is my improved self. Communicating and working alongside other professionals, observing their workflow and problem-solving techniques made me a more competent professional.</p>
+            <p class="article-para">Here the agent is keeping track of 8 observations. It will observe its distance and direction from the trashcan, its position vector, and whether it has picked up all trash. It uses five raycasts which cover up to a 120-degree field of vision. Each item is tagged and spawns randomly in the environment.</p>
         </div>
+        <img src="/img/projects/UnityMLAgents/itemsChart.png" class="article-image">
+        <div>
+            <p class="article-para">The Reward Function is an incentive mechanism that tells the agent what is correct and what is wrong using reward and punishment. The goal of agents in RL is to maximize the total rewards. These were the reward and punishment rules for the agent. </p>
+        </div>
+        <img src="/img/projects/UnityMLAgents/rewardChart.png" class="article-image">
+        <div>
+            <h1 class="article-heading">Challenges</h1>
+            <p class="article-para">The first iteration was strange but expected because the 1st gen rewards system didn't counter the agent standing still. Adding penalties for standing still and hitting a wall solves this.<br>
+            Also, training a single agent can be time-consuming and a slow process. Having multiple environments running parallel helps to lower the processing time significantly. </p>
+        </div>
+        <img src="/img/projects/UnityMLAgents/botHelp.gif" class="article-image">
+        <div>
+            <h1 class="article-heading">Result</h1>
+            <p class="article-para">The results came out well. Though, I noticed that tweaking the reward system makes the bot adopt different strategies to achieve the goal.<br><br>
+            Strategy #1: Collect all the litter first, then dump it.</p>
+        </div>
+        <img src="/img/projects/UnityMLAgents/botStart2.gif" class="article-image">
+        <p class="article-para">*On increasing the 'Dump' reward*<br></r>Strategy #2: Dump after every pick up.</p>
+        <img src="/img/projects/UnityMLAgents/botStrat1.gif" class="article-image">
+        <p class="article-para">After all the modification, tweaking, and hours of training, I ended up with two different brains using two different strategies. Overall, this was a successful first attempt and an overwhelmingly enjoyable experience.</p>
     </div>
 </body>
 </html>
