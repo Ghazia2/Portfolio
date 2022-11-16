@@ -1,13 +1,37 @@
 @font-face{
-    font-family: Poppins, sans-serif;
-    src: url(/fonts/poppins-regular-webfont.woff),
-        url(/fonts/poppins-regular-webfont.woff2);
+    font-family: "Poppins";
+    src: local("Poppins"),
+        url(/fonts/poppins-regular-webfont.woff) format('woff'),
+        url(/fonts/poppins-regular-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face{
-    font-family: Roboto Mono, sans-serif;
-    src: url(/fonts/robotomono-variablefont_wght-webfont.woff),
-        url(/fonts/robotomono-variablefont_wght-webfont.woff2);
+    font-family: "Poppins";
+    src: local("Poppins"),
+        url(/fonts/poppins-semibold-webfont.woff) format('woff'),
+        url(/fonts/poppins-semibold-webfont.woff2) format('woff2');
+    font-weight: 600;
+    font-style: bold;
+}
+
+/* @font-face{
+    font-family: "Poppins";
+    src: local("Poppins"),
+        url(/fonts/poppins-bold-webfont.woff) format('woff'),
+        url(/fonts/poppins-bold-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face{
+    font-family: "Roboto Mono";
+    src: local("Roboto Mono"),
+        url(/fonts/robotomono-variablefont_wght-webfont.woff) format('woff'),
+        url(/fonts/robotomono-variablefont_wght-webfont.woff2) format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 *{
