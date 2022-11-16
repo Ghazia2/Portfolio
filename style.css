@@ -16,15 +16,6 @@
     font-style: bold;
 }
 
-/* @font-face{
-    font-family: "Poppins";
-    src: local("Poppins"),
-        url(/fonts/poppins-bold-webfont.woff) format('woff'),
-        url(/fonts/poppins-bold-webfont.woff2) format('woff2');
-    font-weight: normal;
-    font-style: normal;
-} */
-
 @font-face{
     font-family: "Roboto Mono";
     src: local("Roboto Mono"),
@@ -591,6 +582,12 @@ nav ul li a:hover::after{
 
 #page4 .article-para{
     color: #d8d1ed;
+    text-align: left;
+}
+
+#page4 .article{
+    text-align: center;
+    gap: 60px;
 }
 
 .iframe{
@@ -607,6 +604,12 @@ nav ul li a:hover::after{
     width: 100%;
     height: 100%;
 }
+
+.iframe-container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+  
 
 .image-within{
     display: block;
