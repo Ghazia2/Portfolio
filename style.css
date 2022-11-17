@@ -583,6 +583,7 @@ nav ul li a:hover::after{
 #page4 .article-para{
     color: #d8d1ed;
     margin-top: 10px;
+    text-align: left;
 }
 
 #page4 .article{
@@ -635,4 +636,24 @@ nav ul li a:hover::after{
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+/* ================Scrabble=============== */
+
+#page5{
+    overflow-x: hidden;
+    background: #800008;
+    color: white;
+}
+
+#page5 .cover-image{
+    min-height: 250px;
+}
+
+#page5 .article-para{
+    color: #ffced1;
+}
+
+#page5 .article-li{
+    color: #ffced1;
 }
