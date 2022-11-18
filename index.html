@@ -6,6 +6,7 @@
  <title>Vivek Kumar | Game Developer</title>
  <link rel="stylesheet" href="style.css">
  <link rel="shortcut icon" href="favicon.png?" type="image/x-icon">
+ <script src="https://kit.fontawesome.com/bb1914dfdf.js" crossorigin="anonymous"></script>
 </head>
 <body id="page1">
  <!-- ----------header---------- -->
@@ -20,13 +21,17 @@
     <div class="sphere"></div>
   <div class="header-container">
         <nav>
-            <a href="/"><img src="img/landing/logo.png" class="logo"></a>
-            <ul>
+            <div class="logo-container">
+                <img src="img/landing/logo.png" class="logo">
+            </div>
+            <ul id="sideMenu">
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#projects">WORK</a></li>
                 <li><a href="/vivekkumar_resume.pdf" target="_blank">RESUME</a></li>
                 <li><a href="#">CONTACT</a></li>
+                <i class="fa-regular fa-xmark" onclick="closeMenu()"></i>
             </ul>
+            <i class="fa-regular fa-bars" onclick="openMenu()"></i>
         </nav>
         <div class="header-text">
             <h1>Vivek Kumar</h1>
@@ -40,39 +45,39 @@
  <div id="about">
      <h1 class="sub-title">About Me</h1>
      <div class="row">
-          <div class="about-col-1">
-              <p>I'm a game developer specializing in building immersive and unforgettable gameplay. Currently, I'm building interative educational games at BYJU'S.
+        <div class="about-col-1">
+            <p>I'm a game developer specializing in building immersive and unforgettable gameplay. Currently, I'm building interative educational games at BYJU'S.
                 I'm a game developer specializing in building immersive and unforgettable gameplay. Currently, I'm building interative educational games at BYJU'S.
                 I'm a game developer specializing in building immersive and unforgettable gameplay. Currently, I'm building interative educational games at BYJU'S
-              </p>
-              <div class="tab-titles">
-                  <h1 class="tab-links active-link" onclick="opentab('skills')">SKILLS</h1>
-                  <h1 class="tab-links" onclick="opentab('experience')">EXPERIENCE</h1>
-                  <h1 class="tab-links" onclick="opentab('education')">EDUCATION</h1>
-              </div>
-              <div class="tab-contents active-tab" id="skills">
-                  <ul>
-                      <li><span>Languages</span><br>C#, C++, TypeScript, HTML, CSS</li>
-                      <li><span>Techniques</span><br>Data Structures, Design Patterns, OOPs</li>
-                      <li><span>Tools</span><br>Unity, Cocos Creator, Blender, Figma, Photoshop</li>
-                  </ul>
-              </div>
-              <div class="tab-contents" id="experience">
-                  <ul>
-                      <li><span>Jan 2021 - Present</span><br>Game Developer at BYJU'S</li>
-                      <li><span>Jan- March 2020</span><br>Game Programmer Intern at EWarGames</li>
-                      <li><span>May - July 2019</span><br>Game Developer Intern at MetaDesign</li>
-                  </ul>
-              </div>
-              <div class="tab-contents" id="education">
-                  <ul>
-                      <li><span>July, 2020</span><br>BTech. Chemical Engineering, IIT Roorkee</li>
-                  </ul>
-              </div>
-          </div>
-          <div class="about-col-2">
-              <img src="img/landing/photograph.png" alt="">
-          </div>
+            </p>
+            <div class="tab-titles">
+                <h1 class="tab-links active-link" onclick="opentab('skills')">SKILLS</h1>
+                <h1 class="tab-links" onclick="opentab('experience')">EXPERIENCE</h1>
+                <h1 class="tab-links" onclick="opentab('education')">EDUCATION</h1>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Languages</span><br>C#, C++, TypeScript, HTML, CSS</li>
+                    <li><span>Techniques</span><br>Data Structures, Design Patterns, OOPs</li>
+                    <li><span>Tools</span><br>Unity, Cocos Creator, Blender, Figma, Photoshop</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Jan 2021 - Present</span><br>Game Developer at BYJU'S</li>
+                    <li><span>Jan- March 2020</span><br>Game Programmer Intern at EWarGames</li>
+                    <li><span>May - July 2019</span><br>Game Developer Intern at MetaDesign</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>July, 2020</span><br>BTech. Chemical Engineering, IIT Roorkee</li>
+                </ul>
+            </div>
+        </div>
+        <div class="about-col-2">
+            <img src="img/landing/photograph.png" alt="">
+        </div>
      </div>
  </div>
  <!-- ---------projects----------- -->
@@ -176,6 +181,16 @@
     function topFunction(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+    }
+</script>
+<script>
+    var sideMenu = document.getElementById("sideMenu");
+    function openMenu(){
+        sideMenu.style.right = "0px";
+    }
+
+    function closeMenu(){
+        sideMenu.style.right = "-280px";
     }
 </script>
 </body>

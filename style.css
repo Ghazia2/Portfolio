@@ -25,6 +25,11 @@
     font-style: normal;
 }
 
+@font-face{
+    font-family: 'FontAwesome'; 
+    src: url('../font/fontawesome-webfont.eot?v=3.2.1'); src: url('../font/fontawesome-webfont.eot?#iefix&v=3.2.1') 
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -114,17 +119,23 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 25px 20px;
+    padding: 25px 25px;
 }
 
 .logo{
     width: 200px;
+    padding-left: 25px;
+    vertical-align: middle;
+}
+
+.logo-container{
+    text-align: center;
 }
 
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px clamp(0px, 1.5vw, 20px);
 }
 
 nav ul li a{
@@ -153,6 +164,11 @@ nav ul li a:hover{
 
 nav ul li a:hover::after{
     width: 100%;
+}
+
+nav .fa-regular{
+    font-family: FontAwesome;
+    display: none;
 }
 
 /* --------------header text-------------- */
@@ -340,7 +356,7 @@ nav ul li a:hover::after{
 }
 
 .tab-links{
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 500;
     position: relative;
     cursor: pointer;
@@ -656,4 +672,77 @@ nav ul li a:hover::after{
 
 #page5 .article-li{
     color: #ffced1;
+}
+
+/* ==================MEDIA================== */
+
+@media only screen and (max-width: 750px){
+    nav .fa-regular{
+        display: block;
+        font-size: 30px;
+    }
+
+    nav ul{
+        background-color: #262626;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100vh;
+        padding-top: 70px;
+        z-index: 200;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-regular{
+        position: absolute;
+        top: 17.5px;
+        left: 25px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .logo{
+        padding-left: 0px;
+        max-width: 170px;
+    }
+
+    .sub-title{
+        font-size: 45px;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1 p{
+        font-size: 16px;
+    }
+
+    .about-col-2{
+        margin-bottom: 30px;
+        max-width: 300px;
+        margin: 40px auto 0 auto;
+    }
+
+    .tab-titles{
+        max-width: 340px;
+    }
+
+    .tab-links{
+        font-size: 18px;
+    }
+
+    .tab-contents ul li{
+        font-size: 16px;
+    }
+    
+    .tab-contents ul li span{
+        font-size: 14px;
+    }
 }
