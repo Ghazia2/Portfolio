@@ -335,6 +335,27 @@ nav .fa-regular{
     border-radius: 10px;
 }
 
+.email{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.email::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff3c78;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    transition: 0.3s;
+}
+
+.email:hover::after{
+    width: 100%;
+}
+
 .tab-titles{
     display: flex;
     margin: 18px 0px;
@@ -741,6 +762,10 @@ nav .fa-regular{
 
 
     /* ========projects======= */
+
+    .project-content, .project-content-right{
+        grid-row: 0 / -1;
+    }
 
     .project-grid{
         margin-bottom: 90px;
