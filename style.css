@@ -418,7 +418,7 @@ nav .fa-regular{
     gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
-    padding-bottom: 120px;
+    margin-bottom: 120px;
 }
 
 .project-name{
@@ -676,7 +676,11 @@ nav .fa-regular{
 
 /* ==================MEDIA================== */
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 760px){
+
+
+    /* =======nav======== */
+
     nav .fa-regular{
         display: block;
         font-size: 30px;
@@ -712,16 +716,10 @@ nav .fa-regular{
         max-width: 170px;
     }
 
-    .sub-title{
-        font-size: 45px;
-    }
+    /* =======about======== */
 
     .about-col-1, .about-col-2{
         flex-basis: 100%;
-    }
-
-    .about-col-1 p{
-        font-size: 16px;
     }
 
     .about-col-2{
@@ -734,6 +732,80 @@ nav .fa-regular{
         max-width: 340px;
     }
 
+    /* ========projects======= */
+
+    .project-grid{
+        margin-bottom: 90px;
+    }
+
+    .project-content{
+        grid-column: 6 / -1;
+    }
+    
+    .project-content-right{
+        grid-column: 1 / 8;
+    }
+
+    .project-description{
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+    .project-description-right{
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+
+    .project-tech-list{
+        margin: 10px 0px;
+        gap: 10px;
+    }
+    
+
+    .project-tech-list-right{
+        margin: 10px 0px;
+        gap: 10px;
+    }
+
+    .project-name{
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .project-name-right{
+        padding-bottom: 10px;
+        font-size: 24px;
+    }
+
+    .project-tech-list li, .project-tech-list-right li{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    
+}
+
+@media only screen and (min-width: 760px) and (max-width: 900px){
+    .project-content{
+        grid-column: 6 / -1;
+    }
+    
+    .project-content-right{
+        grid-column: 1 / 8;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px){
+
+    /* =======about======= */
+    .sub-title{
+        font-size: 45px;
+    }
+
+    .about-col-1 p{
+        font-size: 16px;
+    }
+
     .tab-links{
         font-size: 18px;
     }
@@ -744,5 +816,240 @@ nav .fa-regular{
     
     .tab-contents ul li span{
         font-size: 14px;
+    }
+
+    /* ===========projects======== */
+
+
+    .project-grid{
+        position: relative;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .project-content{
+        grid-column: 1 / -1;
+    }
+    
+    .project-content-right{
+        grid-column: 1 / -1;
+    }
+
+    .project-content::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: #262626;
+        opacity: 90%;
+        z-index: -2;
+        cursor: pointer;
+    }
+
+    .project-content-right::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: #262626;
+        opacity: 90%;
+        z-index: -2;
+        cursor: pointer;
+    }
+
+    .project-description{
+        background: none;
+        text-align: left;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+    .project-description-right{
+        background: none;
+        text-align: left;
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+    
+    .project-image{
+        grid-column: 1 / -1;
+    }
+    
+    .project-image-right{
+        grid-column: 1 / -1;
+    }
+    
+    .project-image img{
+        opacity: 100%;
+    }
+    
+    .project-image-right img{
+        opacity: 100%;
+    }
+
+    .project-tech-list{
+        justify-content: flex-start;
+        margin: 0 20px;
+        gap: 10px;
+    }
+    
+
+    .project-tech-list-right{
+        margin: 0 20px;
+        gap: 10px;
+    }
+
+    .project-name{
+        padding-bottom: 0px;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    .project-name-right{
+        padding-bottom: 0px;
+        padding-left: 20px;
+        font-size: 24px;
+    }
+
+    .project-tech-list li, .project-tech-list-right li{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 499px){
+
+    /* =======about======= */
+    .sub-title{
+        font-size: 45px;
+    }
+
+    .about-col-1 p{
+        font-size: 16px;
+    }
+
+    .tab-links{
+        font-size: 18px;
+    }
+
+    .tab-contents ul li{
+        font-size: 16px;
+    }
+    
+    .tab-contents ul li span{
+        font-size: 14px;
+    }
+
+    /* ===========projects======== */
+
+
+    .project-grid{
+        position: relative;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+
+    .project-content{
+        grid-column: 1 / -1;
+    }
+    
+    .project-content-right{
+        grid-column: 1 / -1;
+    }
+
+    .project-content::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: #262626;
+        opacity: 90%;
+        z-index: -2;
+        cursor: pointer;
+    }
+
+    .project-content-right::before{
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        background-color: #262626;
+        opacity: 90%;
+        z-index: -2;
+        cursor: pointer;
+    }
+
+    .project-description{
+        background: none;
+        text-align: left;
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+    
+    .project-description-right{
+        background: none;
+        text-align: left;
+        font-size: 14px;
+        padding: 15px 20px;
+    }
+    
+    .project-image{
+        grid-column: 1 / -1;
+    }
+    
+    .project-image-right{
+        grid-column: 1 / -1;
+    }
+    
+    .project-image img{
+        opacity: 100%;
+    }
+    
+    .project-image-right img{
+        opacity: 100%;
+    }
+
+    .project-tech-list{
+        justify-content: flex-start;
+        margin: 0 20px;
+        gap: 10px;
+    }
+    
+
+    .project-tech-list-right{
+        margin: 0 20px;
+        gap: 10px;
+    }
+
+    .project-name{
+        padding-bottom: 0px;
+        text-align: left;
+        padding-left: 20px;
+        font-size: 21px;
+    }
+
+    .project-name-right{
+        padding-bottom: 0px;
+        padding-left: 20px;
+        font-size: 21px;
+    }
+
+    .project-tech-list li, .project-tech-list-right li{
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    #scrollTop::before{
+        right: 20px;
+        bottom: 20px;
+    }
+
+    #scrollTop::after{
+        right: 50px;
+        bottom: 48.5px;
     }
 }
