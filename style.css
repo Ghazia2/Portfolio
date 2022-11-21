@@ -476,6 +476,7 @@ nav .fa-regular{
 }
 
 .project-image img, .project-image-right img{
+    height: 100%;
     width: 100%;
     transition: 0.3s all ease-in-out;
     opacity: 80%;
@@ -937,9 +938,18 @@ nav .fa-regular{
 }
 @media only screen and (max-width: 499px){
 
+    #about{
+        padding: 150px 15px;
+    }
+
+    #projects{
+        padding: 25px 15px;
+    }
+
     /* =======about======= */
     .sub-title{
-        font-size: 45px;
+        font-size: 38px;
+        padding: 15px 0px;
     }
 
     .about-col-1 p{
