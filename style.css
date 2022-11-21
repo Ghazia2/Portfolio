@@ -490,11 +490,17 @@ nav .fa-regular{
 .project-content{
     grid-column: 7 / -1;
     z-index: 3;
+    display: block;
+    text-decoration: none;
+    color: white;
 }
 
 .project-content-right{
     grid-column: 1 / 7;
     z-index: 3;
+    display: block;
+    text-decoration: none;
+    color: white;
 }
 
 .project-description{
