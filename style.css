@@ -1048,6 +1048,9 @@ nav .fa-regular{
         z-index: 10;
     }
 
+    .project-image img, .project-image-right img{
+        opacity: 100%;
+    }
 
     .project-content, .project-content-right{
         grid-row: 2 / -1;
