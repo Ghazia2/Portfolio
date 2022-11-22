@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Kumar | Game Developer</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/bb1914dfdf.js" crossorigin="anonymous"></script>
+</head>
+<body id="page6">
+    <!-- ----------header---------- -->
+    <div id="#header_alt">
+        <div class="header-container">
+            <nav>
+                <div class="logo-container">
+                    <a href="/">
+                        <img src="/img/landing/logo.png" class="logo">
+                    </a>
+                </div>
+                <ul id="sideMenu">
+                    <li><a href="/index.html#about" onclick="closeMenu()">ABOUT</a></li>
+                    <li><a href="/index.html#projects" onclick="closeMenu()">WORK</a></li>
+                    <li><a href="/vivekkumar_resume.pdf" onclick="closeMenu()" target="_blank">RESUME</a></li>
+                    <li><a href="/index.html#contact" onclick="closeMenu()">CONTACT</a></li>
+                    <i class="fa-regular fa-xmark" onclick="closeMenu()"></i>
+                </ul>
+                <i class="fa-regular fa-bars" onclick="openMenu()"></i>
+            </nav>
+            <img src="/img/projects/Stack/coverMain.png" class="cover-image">
+            <div onclick="topFunction()" id="scrollTop"></div>
+        </div>
+    </div>
+    <div class="article">
+        <div>
+            <h1 class="article-heading">About Stack?</h1>
+            <p class="article-para">Stack is an arcade-style mobile game where you stack blocks as high as you can. With simple, beautiful graphics, easy controls, and soothing music in the background you will find yourself totally immersed in the gameplay.</p>
+        </div>
+        <div>
+            <h1 class="article-heading">My Contribution</h1>
+            <p class="article-para">During my internship at EWar Games, I was given the task to build a very casual arcade-style game that is also competitive for their platform. <br> <br>
+            After some research and discussion with my mentor, we concluded that we should make something similar to StackUp that is very popular among people and has some competitiveness to it. <br><br>
+            Throughout my internship, I worked upon - </p>
+            <ul>
+                <li class="article-li">Basic mechanics of the game.</li>
+                <li class="article-li">Uploading high score to their servers via their API</li>
+                <li class="article-li">UI/UX for the game.</li>
+                <li class="article-li">Generating game assets.</li>
+                <li class="article-li">Sound Design</li>
+            </ul>
+        </div>
+        <img src="/img/projects/Stack/screenShot1.png" class="article-image">
+        <div>
+            <h1 class="article-heading">Challenges</h1>
+            <p class="article-para">To make your game stand out between a bunch of other games on the platform, the User Experience (fast load time, switching between scenes) plays a vital role. But, at the same time platform requires a  small game size. <br><br>
+            The challenge was to minimize the size of the game while not compromising with its User Experience. The solution that we came up with was to generate game assets of scenes and other game objects and upload them on EWar's servers. A single script that would download all the game assets as soon as the game launches. </p>
+        </div>
+        <img src="/img/projects/Stack/screenShot2.png" class="article-image">
+        <div>
+            <h1 class="article-heading">Learnings and Takeaways</h1>
+            <p class="article-para">Despite the ongoing pandemic, we managed to finish and launch this project on time. Thanks to multiple meetings throughout the working days and call sessions that helped me discuss and plan out stuff properly. Communicating with colleagues and being a team player made this whole project possible. </p>
+        </div>
+    </div>
+    <script>
+        let myButton = document.getElementById("scrollTop");
+        window.onscroll = function(){scrollFunction()};
+    
+        function scrollFunction(){
+            if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+                myButton.style.display = "block";
+            }
+            else{
+                myButton.style.display = "none";
+            }
+        }
+    
+        function topFunction(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script>
+        var sideMenu = document.getElementById("sideMenu");
+        function openMenu(){
+            sideMenu.style.right = "0px";
+        }
+    
+        function closeMenu(){
+            sideMenu.style.right = "-280px";
+        }
+    </script>
+</body>
+</html>
