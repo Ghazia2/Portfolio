@@ -56,12 +56,14 @@
      <h1 class="sub-title">About Me</h1>
      <div class="row">
         <div class="about-col-1">
-            <p>I'm Vivek Kumar, Front-end engineer with a background in game development and 4+ years of total experience. Previously
-developed interactive educational games and simluations at BYJU'S, then transitioned into frontend engineering through
-independent projects and self-learning. Skilled in React, TypeScript, and Unity. Passionate about
-building performant and user-focused web applications. <br> 
-            If you have any fun project idea or games to play, please feel free to ping me <a href="mailto:vkumar@ch.iitr.ac.in" class="email">@vkumar@ch.iitr.ac.in</a>.
-            </p>
+            <div class="project-description-right">
+                <p>I'm Vivek Kumar, front-end engineer with a background in game development and 4+ years of total experience. <br>Previously
+                    developed interactive educational games and simluations at BYJU'S, then transitioned into frontend engineering through
+                    independent projects and self-learning. Passionate about
+                    building performant and user-focused web applications. <br><br> 
+                    If you have any fun project ideas or just want to chat, feel free to ping me <a href="mailto:vkumar@ch.iitr.ac.in" class="email">@vkumar@ch.iitr.ac.in</a>.
+                </p>
+            </div>
             <div class="tab-titles">
                 <h1 class="tab-links active-link" onclick="opentab('skills')">SKILLS</h1>
                 <h1 class="tab-links" onclick="opentab('experience')">EXPERIENCE</h1>
@@ -69,15 +71,16 @@ building performant and user-focused web applications. <br>
             </div>
             <div class="tab-contents active-tab" id="skills">
                 <ul>
-                    <li><span>Languages</span><br>C#, C++, TypeScript, HTML, CSS</li>
-                    <li><span>Techniques</span><br>Data Structures, Design Patterns, Netcode, OOPs</li>
-                    <li><span>Tools</span><br>Unity, Cocos Creator, Blender, Figma, Photoshop</li>
+                    <li><span>Languages</span><br>TypeScript, Javascript, C#, HTML, CSS</li>
+                    <li><span>Libraries / Frameworks</span><br>React, React Router, Redux-Toolkit, Tailwind CSS</li>
+                    <li><span>Tools</span><br>Git, Jira, VS Code, Node.js, Vite, Firebase, Figma</li>
                 </ul>
             </div>
             <div class="tab-contents" id="experience">
                 <ul>
-                    <li><span>Jan 2021 - Present</span><br>Game Developer at BYJU'S</li>
-                    <li><span>Jan- March 2020</span><br>Game Programmer Intern at EWarGames</li>
+                    <li><span>Feb 2023 - Present</span><br>Front-end Developer</li>
+                    <li><span>Jan 2021 - Jan 2023</span><br>Game Developer at BYJU'S</li>
+                    <li><span>Jan - March 2020</span><br>Game Programmer Intern at EWarGames</li>
                     <li><span>May - July 2019</span><br>Game Developer Intern at MetaDesign</li>
                 </ul>
             </div>
@@ -96,11 +99,46 @@ building performant and user-focused web applications. <br>
  <section id="projects">
      <h1 class="sub-title">My work</h1>
      <ul>
+        <li class="project-grid">
+            <a href="https://amazon-ecom-store.vercel.app/" target="_blank" class="project-content">
+                <h1 class="project-name">Amazon-Ecom Store</h1>
+                <div class="project-description">
+                    <p>Built a scalable Amazon-style e-commerce platform with user authentication, product browsing, and shopping cart features.</p>
+                </div>
+                <ul class="project-tech-list">
+                    <li>React</li>
+                    <li>TypeScript</li>
+                    <li>Redux-Toolkit</li>
+                    <li>React-Router</li>
+                    <li>Tailwind CSS</li>
+                </ul>
+            </a>
+            <div class="project-image">
+                <a href="https://amazon-ecom-store.vercel.app/" target="_blank"><img src="img/projects/AmazonEcomStore/amazonCover.png" ></a>
+            </div>
+         </li>
+         <li class="project-grid">
+             <a href="https://ai-generative-chatbot.vercel.app/" target="_blank" class="project-content-right">
+                 <h1 class="project-name-right">Gemini-AI Chatbot</h1>
+                 <div class="project-description-right">
+                     <p>Built an AI-powered chatbot interface using Gemini API to handle user prompts and generate intelligent responses in real-time.</p>
+                 </div>
+                 <ul class="project-tech-list-right">
+                     <li>React</li>
+                     <li>Javascript</li>
+                     <li>React-Router</li>
+                     <li>UseContext</li>
+                 </ul>
+                </a>
+             <div class="project-image-right">
+                 <a href="https://ai-generative-chatbot.vercel.app/" target="_blank"><img src="img/projects/GeminiChatBot/cover.png" ></a>
+             </div>
+         </li>
          <li class="project-grid">
             <a href="/pages/byjus.html" class="project-content">
                 <h1 class="project-name">Xplore - BYJU'S</h1>
                 <div class="project-description">
-                    <p>Developing various interactive simulations and games for the Xplore Interactive Learning vertical of BYJU'S.</p>
+                    <p>Developed interactive simulations and games for the XPLORE Interactive Learning vertical at BYJU’S.</p>
                 </div>
                 <ul class="project-tech-list">
                     <li>Cocos Creator</li>
@@ -116,7 +154,7 @@ building performant and user-focused web applications. <br>
              <a href="/pages/mlAgent.html" class="project-content-right">
                  <h1 class="project-name-right">Unity ML-Agents</h1>
                  <div class="project-description-right">
-                     <p>Developed and trained an AI using Reinforcement Learning. The AI is capable of detecting litter and dumping it into a trashcan.</p>
+                     <p>Built and trained an AI agent to detect and dispose of litter using Reinforcement Learning.</p>
                  </div>
                  <ul class="project-tech-list-right">
                      <li>Unity 3D</li>
@@ -144,7 +182,7 @@ building performant and user-focused web applications. <br>
                 <a href="/pages/betweenTwoWorlds.html"><img src="img/projects/BetweenTwoWorld/cover.png" alt=""></a>
             </div>
          </li>
-         <li class="project-grid">
+         <!-- <li class="project-grid">
             <a href="/pages/scrabble.html" class="project-content-right">
                 <h1 class="project-name-right">Scrabbles</h1>
                 <div class="project-description-right">
@@ -175,7 +213,7 @@ building performant and user-focused web applications. <br>
             <div class="project-image">
                 <a href="/pages/stack.html"><img src="img/projects/Stack/cover.png" ></a>
             </div>
-         </li>
+         </li> -->
      </ul>
  </section>
 <script>

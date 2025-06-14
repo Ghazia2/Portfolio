@@ -42,50 +42,47 @@
     <div class="article">
         <div>
             <h1 class="article-heading">Motivation</h1>
-            <p class="article-para">The goal was to develop an AI that learns to clean a room, from detecting trash to dumping it into a trashcan, all by itself using Reinforcement Learning.</p>
+            <p class="article-para">The goal of this project was to develop an AI agent capable of autonomously cleaning a room—detecting trash, picking it up, and dumping it into a trashcan—using Reinforcement Learning (RL). The idea was to train the agent to make decisions and improve its behavior over time based on rewards and penalties.</p>
         </div>
         <div>
             <h1 class="article-heading">Reinforcement Learning</h1>
-            <p class="article-para">The Agents/Bots will learn using Reinforcement Learning, therefore their actions are either rewarded or penalized. The future generation Bots will act upon these sets and create better and better behaviors.</p>
+            <p class="article-para">The bots learned using Reinforcement Learning, where their actions were either rewarded or penalized. Each new generation of agents built on the behavior of previous ones, gradually developing more efficient strategies.</p>
         </div>
         <img src="/img/projects/UnityMLAgents/flowChart.png" class="article-image">
         <div>
-            <p class="article-para"> The typical framing of a Reinforcement Learning scenario: an agent takes actions in an environment, which is interpreted into a reward and a representation of the state, which are fed back into the agent.</p>
+            <p class="article-para">In a typical RL setup, an agent interacts with an environment, receives rewards and state observations based on its actions, and uses this feedback to refine its future decisions.</p>
         </div>
         <div>
             <h1 class="article-heading">Designing the Environment</h1>
-            <p class="article-para">A typical Learning Environment contains three components:
-            </p>
+            <p class="article-para">The simulated learning environment included three key components:</p>
             <ul>
-                <li class="article-li">Agent: It is an assumed AI entity that performs actions in an environment to gain reward.</li>
-                <li class="article-li">Brain: It defines what are the inputs and outputs of the decision process.</li>
-                <li class="article-li">Academy: which orchestrates the observation and decision making process.</li>
+                <li class="article-li">Agent: The AI entity performing actions within the environment.</li>
+                <li class="article-li">Brain: The decision-making model, defining inputs and outputs.</li>
+                <li class="article-li">Academy: The system that orchestrated training, observations, and decision processes.</li>
             </ul>
         </div>
         <img src="/img/projects/UnityMLAgents/codeSnip.png" class="article-image">
         <div>
-            <p class="article-para">Here the agent is keeping track of 8 observations. It will observe its distance and direction from the trashcan, its position vector, and whether it has picked up all trash. It uses five raycasts which cover up to a 120-degree field of vision. Each item is tagged and spawns randomly in the environment.</p>
+            <p class="article-para">The agent tracked eight observations, including its position vector, distance and direction from the trashcan, and whether it had collected all the trash. It also used five raycasts to simulate vision within a 120-degree field of view. Items were tagged and spawned randomly within the environment.</p>
         </div>
         <img src="/img/projects/UnityMLAgents/itemsChart.png" class="article-image">
         <div>
-            <p class="article-para">The Reward Function is an incentive mechanism that tells the agent what is correct and what is wrong using reward and punishment. The goal of agents in RL is to maximize the total rewards. These were the reward and punishment rules for the agent. </p>
+            <p class="article-para">The reward function played a crucial role—it acted as a feedback mechanism to help the agent learn what behaviors were desirable. The goal was for the agent to maximize total rewards by learning the correct sequence of actions.</p>
         </div>
         <img src="/img/projects/UnityMLAgents/rewardChart.png" class="article-image">
         <div>
             <h1 class="article-heading">Challenges</h1>
-            <p class="article-para">The first iteration was strange but expected because the 1st gen rewards system didn't counter the agent standing still. Adding penalties for standing still and hitting a wall solves this.<br>
-            Also, training a single agent can be time-consuming and a slow process. Having multiple environments running parallel helps to lower the processing time significantly. </p>
+            <p class="article-para">The first iteration yielded strange, yet expected results. The initial reward system failed to discourage the agent from standing still, so it often did just that. By adding penalties for inactivity and collisions, the agent was encouraged to explore and improve.<br><br>Another major challenge was the training time—teaching a single agent was time-consuming. To speed up the process, I implemented parallel training across multiple environments, which significantly reduced overall training time.</p>
         </div>
         <img src="/img/projects/UnityMLAgents/botHelp.gif" class="article-image">
         <div>
             <h1 class="article-heading">Result</h1>
-            <p class="article-para">The results came out well. Though, I noticed that tweaking the reward system makes the bot adopt different strategies to achieve the goal.<br><br>
-            Strategy #1: Collect all the litter first, then dump it.</p>
+            <p class="article-para">Another major challenge was the training time—teaching a single agent was time-consuming. To speed up the process, I implemented parallel training across multiple environments, which significantly reduced overall training time.<br><br>Strategy #1: Collect all the litter first, then dump it (triggered by a moderate reward for dumping).</p>
         </div>
         <img src="/img/projects/UnityMLAgents/botStart2.gif" class="article-image">
-        <p class="article-para">*On increasing the 'Dump' reward*<br></r>Strategy #2: Dump after every pick up.</p>
+        <p class="article-para">Strategy #2: Dump trash after every pickup (triggered by increasing the dump reward value).</p>
         <img src="/img/projects/UnityMLAgents/botStrat1.gif" class="article-image">
-        <p class="article-para">After all the modification, tweaking, and hours of training, I ended up with two different brains using two different strategies. Overall, this was a successful first attempt and an overwhelmingly enjoyable experience.</p>
+        <p class="article-para">After many iterations, reward adjustments, and hours of training, I ended up with two separate agent brains, each using a distinct approach to complete the task.</p>
     </div>
     <script>
         let myButton = document.getElementById("scrollTop");
