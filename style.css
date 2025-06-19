@@ -919,6 +919,10 @@ nav .fa-regular{
         font-size: 16px;
         padding: 15px 20px 20px 20px;
     }
+
+    .about{
+        padding: 15px 0px 20px 0px;
+    }
     
     .project-image, .project-image-right{
         grid-column: 1 / -1;
@@ -984,15 +988,15 @@ nav .fa-regular{
     .about-col-1 p{
         font-size: 14px;
     }
-
+    
     .tab-titles{
         max-width: 300px;
     }
-
+    
     .tab-links{
         font-size: 16px;
     }
-
+    
     .tab-contents ul li{
         font-size: 14px;
     }
@@ -1000,14 +1004,14 @@ nav .fa-regular{
     .tab-contents ul li span{
         font-size: 14px;
     }
-
+    
     .project-grid{
         position: relative;
         align-items: center;
         margin-bottom: 60px;
         grid-template-rows: 1fr 0.6fr;
     }
-
+    
     .project-content{
         grid-column: 1 / -1;
     }
@@ -1043,6 +1047,10 @@ nav .fa-regular{
         text-align: left;
         font-size: 13.5px;
         padding: 15px 10px 20px 10px;
+    }
+    
+    .about{
+        padding: 15px 0px 20px 0px;
     }
     
     .project-image, .project-image-right{
